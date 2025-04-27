@@ -1,3 +1,5 @@
+package Planeta;
+
 public class Planeta {
     String nombre = null;
     int c_satelites = 0;

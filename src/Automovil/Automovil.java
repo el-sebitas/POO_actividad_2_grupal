@@ -1,3 +1,5 @@
+package Automovil;
+
 public class Automovil {
     String marca;
     int modelo;
