@@ -6,6 +6,7 @@ public class CuentaBancaria {
     int numero_cuenta;
     enum tipo_cuenta {AHORROS, CORRIENTE} tipo_cuenta tipo;
     double saldo;
+    double tasa_interes;
 
     public CuentaBancaria(String apellidos, String nombre, int numero_cuenta, tipo_cuenta tipo) {
         this.apellidos = apellidos;
@@ -13,6 +14,7 @@ public class CuentaBancaria {
         this.numero_cuenta = numero_cuenta;
         this.tipo = tipo;
         this.saldo = 0;
+        this.tasa_interes = 0;
     }
 
     void imprimirDatos() {
@@ -61,6 +63,10 @@ public class CuentaBancaria {
         } else {
             System.out.println("No se pudo transferir el dinero");
         }
+    }
+
+    void aplicarTasa() {
+        this.saldo += this.saldo * this.tasa_interes;
     }
 
     public static void main(String args[]) {
